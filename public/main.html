@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<style type="text/css">
+
+.topnav
+{
+   
+   overflow:hidden;
+   background-color:transparent;
+} 
+.topnav a
+{
+    float:left;
+    display:block;
+    color:#f2f2f2;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    font-size:17px;
+	font-family: sans-serif;
+}
+.topnav a:hover
+{
+    background-color:#505151;
+    color:black;
+}
+.topnav a.active
+{
+  background-color:#4CAF50;
+  color:white;
+} 
+a.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body
+{
+  background-image:url("background.jpg");
+}  
+textarea{
+   background-color:transparent;
+   color:white;
+   outline:none;
+   font-family:sans-serif;
+   font-size:20px; 
+}
+</style>
+</head>
+<body ng-app="myApp" >
+<form>
+<div class="topnav" id="mytopnav">
+<a class="topnav" href ="#/emotion">EMOTION</a>
+<a href="#/concepts">CONCEPTS</a>
+<a href="#/categories">CATEGORIES</a>
+<a href="#/sentiment">SENTIMENT</a>
+<a href="#/tone"> TONE</a>
+</div>
+<br>
+<br>
+<textarea  ng-model="name" rows=10 cols=133 placeholder ="plz enter a text to analyze it "></textarea>
+</form>
+<ng-view>
+</ng-view>
+</body>
+<script src="routing.js"></script>
+<script src="emotionctrl.js"></script>
+<script src="categoriesctrl.js"></script>
+<script src="conceptsctrl.js"></script>
+<script src="sentimentctrl.js"></script>
+<script src="tonectrl.js"></script>
+<script src="../../canvasjs.min.js"></script>
+</html>

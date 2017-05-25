@@ -1,0 +1,35 @@
+<div class="container">
+<style>
+table
+{
+    width:100%;
+}
+th,td
+{
+    text-align:center;
+     padding:8px;
+	 font-family: sans-serif;
+}
+tr
+{
+background-color: #9f9fa0;
+
+}
+th
+{
+    background-color: #505151;
+    color: white;
+	font-family: sans-serif;
+}	 
+</style>
+<table ng-show="names">
+<tr>
+<th>score</th>
+<th>category</th>
+</tr>
+<tr ng-repeat="name in names.categories">
+<td>{{name.score}}</td>
+<td>{{name.label}}</td>
+</tr>
+</table>
+</div> 

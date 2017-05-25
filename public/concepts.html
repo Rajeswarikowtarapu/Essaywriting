@@ -1,0 +1,38 @@
+<div class="container">
+<style>
+table
+{
+    width:100%;
+}
+th,td
+{
+    text-align:center;
+     padding:8px;
+	 font-family: sans-serif;
+}
+tr
+{
+background-color: #9f9fa0;
+
+}
+th
+{
+     background-color: #505151;
+    color: white;
+	font-family: sans-serif;
+}	 
+</style>
+<table ng-show="names">
+<tr>
+    <th>  TEXT </th>
+	<th> RELEVANCE </th>
+	<!--<th> db_piedia Resource </th>-->
+</tr>
+<tr ng-repeat="nm in names.concepts" >
+<td>{{nm.text}}</td>
+<td>{{nm.relevance}}</td>
+<!--<td>{{nm.dbpedia_resource}}</td>-->
+</tr>
+</table> 
+
+</div>	
